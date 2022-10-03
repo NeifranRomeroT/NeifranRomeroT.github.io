@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400&display=swap');
+
+
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color:#FFD55A;
+    color:#293250;
+    font-family: 'Lora';
+    margin-bottom: auto;
+}
+h1{
+        background-color:#6DD47E ; 
+        text-align: center;
+        padding: 13px;
+        border-radius:13px;
+}
+
+
+
+
+div{
+    background-color:#6DD47E ; 
+    padding: 13px;
+    border-radius:13px;
+}
+img{
+    padding: 5px;
+    border-radius:20px;
+    display: block;
+    margin: auto;
+}
+ 
+    
+
+     
