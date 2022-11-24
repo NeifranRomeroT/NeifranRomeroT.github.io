@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Portafolio del Aprendiz</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="../../js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/Leyva .png" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images//Leyva .png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images//Leyva .png" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Busqueda nueva.." aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notificaciones</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Error de la aplicación</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    En este momento
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Ajustes</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Mensaje privado
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Registro de nuevo usuario</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    hace 2 días
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face-mi.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Ajustes
+              </a>
+              <a class="dropdown-item" href="index.html">
+                <i class="ti-power-off text-primary"></i>
+                Cerrar sesión
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">PIELES DE LA BARRA LATERAL</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Claro</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Oscuro</div>
+          <p class="settings-heading mt-2">PIELES DE CABECERA</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">LISTA DE QUE HACERES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Agregar</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Reunión de revisión del equipo a las 03:00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepárate para la presentación
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolver todos los tickets de baja prioridad que vencen hoy
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="images/faces/face-mi.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face-mi.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face-mi.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face-mi.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face-mi.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face-mi.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Portafolio Aprendiz</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Pseudocodigo</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_1.doc" >ACTIVIDAD 1</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_2.rar">ACTIVIDAD 2</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_3.rar">ACTIVIDAD 3</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_4.rar" >ACTIVIDAD 4</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_5.rar">ACTIVIDAD 5</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_6.rar">ACTIVIDAD 6</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_7.rar" >ACTIVIDAD 7</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_8.rar">ACTIVIDAD 8</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_9.rar">ACTIVIDAD 9</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_10.rar" >ACTIVIDAD 10</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_11.rar">ACTIVIDAD 11</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_12.rar">ACTIVIDAD 12</a></li>
+                <li class="nav-item"> <a class="nav-link" href="PSEINT/ACTIVIDAD_13.rar" >ACTIVIDAD 13</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">HTML 5</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/HTML5/actividad2/index.html">Actividad 2</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://www.youtube.com/watch?v=1sruWtZTXOM">Actividad 3</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/html5/Actividad_4_HTML5/index.html">Actividad 4 </a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/html5/Actividad_5_HTML5/index.html">Actividad 5</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/html5/ACTIVIDAD_6_HTML5/index.html">Actividad 6</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/html5/ACTIVIDAD_7_HTML5/index.html">Actividad 7</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/html5/ACTIVIDAD_8_HTML5/index.html">Actividad 8</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/html5/ACTIVIDAD_9_HTML5/index.html.html">Actividad 9</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://youtu.be/1sruWtZTXOM">Actividad 10</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">CSS 3</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/CSS3/CSS3.pdf">Actividad 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/CSS3/Actividad_2_CSS3/index.html">Actividad 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/CSS3/Actividad_3_CSS3/index.html">Actividad 3</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/CSS3/actividad_4_CSS3/index.html">Actividad 4</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/CSS3/ACTIVIDAD%20_6_CSS3/index.html">Actividad 5</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/CSS3/proyecto_2_CSS3/index.html">Actividad 6</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Javascript 6</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/js/Ejercicio%201_JS/index.html">Actividad 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/js/Ejemplo%202_JS/index.html">Actividad 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/js/actividad_3_JS/index.html">Actividad 3</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/js/actividad_4_JS/index.html">Actividad 4</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/js/actividad_5_JS/index.html">Actividad 5</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/js/ejemplo%206_JS/index.html">Actividad 6</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/js/ejemplo%207_JS/index.html">Actividad 7</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/js/Actividad_8_JS/index.html">Actividad 8</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://neifranromerot.github.io/js/Actividad%20_9_JS%20-%20imaginaciones/index.html">Actividad 9</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Python</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD _1_PYTHON.docx">Actividad 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_2_PYTHON/EXTRUCTURA SECUANCIALES.zip">Actividad 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_3_PYTHON.zip">Actividad 3</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_4_PYTHON.zip">Actividad 4</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_5_PYTHON.zip">Actividad 5</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_6_PYTHON.zip">Actividad 6</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_7_PYTHON.zip">Actividad 7</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_8_PYTHON.pdf">Actividad 8</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_9_PYTHON.zip">Actividad 9</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_10_PYTHON.png">Actividad 10</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_11_PYTHON.zip">Actividad 11</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_12_PYTHON.zip">Actividad 12</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_13_PYTHON.zip">Actividad 13</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_14_PYTHON.zip">Actividad 14</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_15_PYTHON.zip">Actividad 15</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">Páginas de usuario</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Acceso </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Registrar </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">páginas de error</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-404.html"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../pages/documentation/documentation.html">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Documentacion</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">Bienvenido, estamos en linea!</h3>
+                  <h6 class="font-weight-normal mb-0">Analisis y Desarrollo de Sistemas de Informacion <span class="text-primary">Sena Regional Sucre</span></h6>
+                </div>
+                <div class="col-12 col-xl-4">
+                 <div class="justify-content-end d-flex">
+                  <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                    <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                     <i class="mdi mdi-calendar"></i> Dia (16 Noviembre 2022)
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
+                      <a class="dropdown-item" href="#">Enero - Marzo</a>
+                      <a class="dropdown-item" href="#">Marzo - Junio</a>
+                      <a class="dropdown-item" href="#">Junio - ​​Agosto</a>
+                      <a class="dropdown-item" href="#">Agosto - Noviembre</a>
+                    </div>
+                  </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card tale-bg">
+                <div class="card-people mt-auto">
+                  <img src="images/Videos-Sena-1.jpg" alt="people">
+                  <div class="weather-info">
+                    <div class="d-flex">
+                      <div>
+                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
+                      </div>
+                      <div class="ml-2">
+                        <h4 class="location font-weight-normal">Sincelejo</h4>
+                        <h6 class="font-weight-normal">Colombia</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin transparent">
+              <div class="row ">
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body">
+                      <p class="mb-4">HTML:5</p>
+                      <p class="fs-30 mb-2">10 <img src="images//HTML5_logo_and_wordmark.svg.png" height="40em"></p>
+                      <p> ACTIVIDADES</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-dark-blue">
+                    <div class="card-body">
+                      <p class="mb-4">CSS</p>
+                      <p class="fs-30 mb-2">6 <img src="images/CSS3_logo_and_wordmark.svg.png" height="40em"></p>
+                      <p> ACTIVIDADES</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4  stretch-card transparent">
+                  <div class="card card-light-blue">
+                    <div class="card-body">
+                      <p class="mb-4">JAVASCRIPT</p>
+                      <p class="fs-30 mb-2">9 <img src="images/Unofficial_JavaScript_logo_2.svg.png" height="40em"></p>
+                      <p> ACTIVIDADES</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4  stretch-card transparent">
+                  <div class="card card-light-danger">
+                    <div class="card-body">
+                      <p class="mb-4">PYTHON</p>
+                      <p class="fs-30 mb-2">16 <img src="images/Python-logo-notext.svg.png" height="40em"></p>
+                      <p> ACTIVIDADES</p><br>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-4  stretch-card transparent">
+                  <div class="card card-dark-blue">
+                    <div class="card-body">
+                      <p class="mb-4">PSEINT</p>
+                      <p class="fs-30 mb-2">13 <img src="images/logo-header.png" height="40em"></p>
+                      <p> ACTIVIDADES</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body">
+                      <p class="mb-4">BOOTSTRAP</p>
+                      <p class="fs-30 mb-2">16 <img src="images/Bootstrap_logo.svg.png" height="40em"></p>
+                      <p> ACTIVIDADES</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card position-relative">
+                <div class="card-body">
+                  <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2" >
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row">
+                          <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
+                            <div class="ml-xl-4 mt-3">
+                            <p class="card-title">TRABAJOS DE CLASE</p>
+                              <h1 class="text-primary">2022</h1>
+                              <h3 class="font-weight-500 mb-xl-4 text-primary">A.D.S.I</h3>
+                              <p class="mb-2 mb-xl-0">El número total de sesiones dentro del intervalo de fechas. Es el período de tiempo que un usuario está activamente comprometido con su sitio web, página o aplicación, etc.</p>
+                            </div>  
+                            </div>
+                          <div class="col-md-12 col-xl-9">
+                            <div class="row">
+                              <div class="col-md-6 border-right">
+                                <div class="table-responsive mb-3 mb-md-0 mt-3">
+                                  <table class="table table-borderless report-table">
+                                    <tr>
+                                      <td class="text-muted">HTML5</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="85" aria-valuemax="85"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">10</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">CSS</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="30" aria-valuemax="30"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">6</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">JAVASCRIPT</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="70" aria-valuemax="70"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">9</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">PYTHON</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-info" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="95" aria-valuemax="95"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">14</h5></td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                                <div class="col-md-6 mt-3">
+                                <canvas id="north-america-chart"></canvas>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+          <div class="row">
+              <div class="col-XL-12 stretch-card grid-margin grid-margin-md-0">    
+                <div class="card data-icon-card-primary">
+                  <div class="card-body">
+                    <p class="card-title text-white text-center">ESTUDIANTE</p>
+                  
+                  <div class="col-12 text-white text-center">
+                    <h3>Neifran Romero Tovar</h3>
+                    <p class="text-white font-weinght-500 md-0">Ah sido muy Diciplinado en el area de Trabajos</p>
+                    <div class="col-md-12 mt-3 text-center">
+                    <img src="images/Logotipo Tienda De Moda Minimalista Blanco y Negro.png" height="300em">
+                  </div>
+                 </div>
+                </div> 
+              </div>
+            </div>
+                <div class="col-xl-8 stretch-card grid-margin grid-margin-md-0">
+                  <div class="card data-icon-card-primary">
+                    <div class="col-XL-12 card-body">
+                      <h3>Detalles del Curso</h3>
+                      <p class="card-title">Charts</p>
+                      <div class="charts-data">
+                        <div class="mt-3">
+                          <p class="mb-0">Rendimiento</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="progress progress-md flex-grow-1 mr-4">
+                              <div class="progress-bar bg-inf0" role="progressbar" style="width: 70%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mb-0">70%</p>
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                          <p class="mb-0">Asistencias</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="progress progress-md flex-grow-1 mr-4">
+                              <div class="progress-bar bg-info" role="progressbar" style="width: 95%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mb-0">100%</p>
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                          <p class="mb-0">Puntos Ganados</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="progress progress-md flex-grow-1 mr-4">
+                              <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mb-0">60%</p>
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                          <p class="mb-0">Trabajos Entregados</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="progress progress-md flex-grow-1 mr-4">
+                              <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mb-0">85%</p>
+                          </div>
+                        </div>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022. <a href="https://eliseovega.github.io/" target="_blank">Ing. Neifran Romero Tovar</a> Aprendiz</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">SENA - CITS <i class="ti-heart text-danger ml-1"></i></span>
+          </div>
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Programa <a href="https://www.themewagon.com/" target="_blank">ADSI</a></span> 
+          </div>
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/chart.js/Chart.min.js"></script>
+  <script src="../../vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="../../js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/app.js"></script>
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/dashboard.js"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
