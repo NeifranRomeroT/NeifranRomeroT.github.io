@@ -1,0 +1,11 @@
+.banner-image{
+    background-image: url('../img/rear-view-of-programmer-working-all-night-long.jpg');
+    background-size: cover;
+}
+body{
+    background: linear-gradient(45deg, rgb(75, 195, 202) 40%, white 50%);
+}
+
+.card-body{
+    background: linear-gradient(45deg, rgb(155, 143, 143) 30%, white 50%);
+}
